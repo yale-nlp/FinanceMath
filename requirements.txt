@@ -1,0 +1,12 @@
+aiohttp==3.8.5
+aiohttp==3.8.6
+aiolimiter==1.1.0
+datasets==2.14.6
+evaluate==0.4.1
+numpy==1.26.3
+openai==0.28.1
+protobuf==4.25.1
+sympy==1.12
+tqdm==4.66.1
+transformers==4.36.0
+vllm==0.2.4
