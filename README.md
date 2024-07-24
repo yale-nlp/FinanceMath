@@ -1,5 +1,5 @@
 ## KnowledgeMath
-The data and code for the paper [KnowledgeMath: Knowledge-Intensive Math Word Problem Solving in Finance Domains](https://arxiv.org/abs/2311.09797). This research investigates the table-to-text capabilities of different LLMs using four datasets within two real-world information seeking scenarios. It demonstrates that high-performing LLMs, such as GPT-4, can effectively serve as table-to-text generators, evaluators, and feedback generators.
+The data and code for the paper [KnowledgeMath: Knowledge-Intensive Math Word Problem Solving in Finance Domains](https://arxiv.org/abs/2311.09797). 
 **KnowledgeMath** is a knowledge-intensive dataset focused on mathematical reasoning within the domain of finance. It requires the model to comprehend specialized financial terminology and to interpret tabular data presented in the questions. 
 **KnowledgeMath** includes **1200 QA examples** across 7 key areas in finance. These examples were collected from financial experts and feature detailed solution annotations in Python format.
 
