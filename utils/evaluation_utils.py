@@ -14,6 +14,7 @@ import asyncio
 from utils.openai_utils import *
 from tqdm import tqdm
 
+
 def reliability_guard(maximum_memory_bytes=None):
     """
     This disables various destructive functions and prevents the generated code
@@ -94,8 +95,13 @@ def reliability_guard(maximum_memory_bytes=None):
     sys.modules["tkinter"] = None
 
 
+def round_up_to_decimal(number, decimals):
+    factor = 10 ** decimals
+    return math.ceil(number * factor) / factor
+
+
 def within_eps(pred: float, gt: float):
-    eps = abs(gt) * 0.04
+    eps = abs(gt) * 0.0015
     if pred >= gt - eps and pred <= gt + eps:
         return True
     else:
@@ -112,30 +118,21 @@ def compare_two_numbers(p, gt):
     else:
         raise ValueError(p)
 
-    if isinstance(gt, float):
-        if abs(p) <= abs(gt) / 50 and within_eps(pred=abs(p)*100, gt=abs(gt)):
-            return True
-        if abs(gt) <= abs(p) / 500 and within_eps(pred=abs(p)*1000, gt=abs(gt)):
-            return True
-        if abs(gt) <= abs(p) / 500000 and within_eps(pred=abs(p)*1000000, gt=abs(gt)):
-            return True
+    v1, v2 = max(abs(gt), abs(p)), min(abs(gt), abs(p))
+    if (v1 !=0 and v2 != 0) and int(math.log10(v1 / v2)) == math.log10(v1 / v2):
+        return True
 
-        if abs(gt) <= abs(p) / 50 and within_eps(pred=abs(p), gt=abs(gt)*100):
-            return True
-        if abs(p) <= abs(gt) / 500 and within_eps(pred=abs(p), gt=abs(gt)*1000):
-            return True
-        if abs(p) <= abs(gt) / 500000 and within_eps(pred=abs(p), gt=abs(gt)*1000000):
-            return True
+    if v2 <= v1 / 50 and within_eps(pred=v2*100, gt=v1):
+        return True
+    elif v2 <= v1 / 500 and within_eps(pred=v2*1000, gt=v1):
+        return True
+    elif v2 <= v1 / 50000 and within_eps(pred=v2*100000, gt=v1):
+        return True
 
-        if gt * p < 0:
-            if within_eps(pred=abs(p), gt=abs(gt)):
-                return True
-        return within_eps(pred=p, gt=gt)
-    else:
-        if abs(p) <= abs(gt) / 10:
-            if round(abs(p)*100) == round(abs(gt)) or round(abs(p)*1000) == round(abs(gt)) or round(abs(p)*1000000) == round(abs(gt)):
-                return True
-        return round(abs(p)) == abs(gt) or (math.floor(abs(p)) == abs(gt) and abs(p) > 10) or ((abs(p) + 1 == abs(gt) or abs(p) -1 ==abs(gt)) and abs(p) > 100)
+    if round_up_to_decimal(v1, 3) == round_up_to_decimal(v2, 3):
+        return True
+
+    return within_eps(pred=p, gt=gt)
 
 def is_number(string):
     pattern = r'^[-+]?(\d{1,3}(,\d{3})*|(\d+))(\.\d+)?$'
@@ -169,6 +166,8 @@ def normalize(prediction: str):
         prediction = prediction.split('≈')[-1].strip()
     if '`' in prediction:
         prediction = prediction.replace('`', '')
+    if '%' in prediction:
+        prediction = prediction.replace('%', '')
     if '$' in prediction:
         prediction = prediction.replace('$', '')
     if '°' in prediction:
@@ -241,17 +240,20 @@ def normalize(prediction: str):
 
     return prediction
 
-def get_acc(prediction, gt):
+def get_acc(prediction, gt, cot=True):
     try:
-        # prediction = normalize(prediction)
-        prediction = float(prediction)
+        if cot:
+            prediction = normalize(prediction)
+        else:
+            prediction = float(prediction)
+
         answer_type = type(gt).__name__
         assert answer_type in ["int", "float", "float64", "bool"], answer_type
         if isinstance(prediction, (str, int, float, bool)) or isinstance(prediction, list):
             # Comparing prediction against the reference
             if answer_type in ['bool']:
                 acc = int(prediction == gt)
-            elif answer_type == 'integer':
+            elif answer_type == 'int':
                 acc = int(compare_two_numbers(prediction, gt))
             elif answer_type == 'float' or answer_type == 'float64':
                 acc = int(compare_two_numbers(prediction, gt))
@@ -266,7 +268,7 @@ def get_acc(prediction, gt):
     
 
 # helper function for evaluating CoT predictions
-def extract_cot_answers(examples):
+def extract_cot_answers(examples, client):
     instruction = """Extract the final answer of the question as a numeric value from the given solution. If you cannot extract an answer, return "None".
 
 You should either return "None" or a numeric value without any additional words."""
@@ -280,14 +282,15 @@ You should either return "None" or a numeric value without any additional words.
         ]
         model_inputs.append(chat)
     
-    outputs = asyncio.run(generate_from_openai_chat_completion( 
+    outputs = asyncio.run(generate_from_openai_chat_completion(
+                                                    client = client, 
                                                     messages = model_inputs,
-                                                    engine_name = "gpt-3.5-turbo-1106", 
-                                                    max_tokens = 8,
-                                                    requests_per_minute = 200,))
+                                                    engine_name = "gpt-4o-mini", 
+                                                    max_tokens = 16,
+                                                    requests_per_minute = 300,))
     count = 0
     id_list = list(range(len(examples)))
-    while count < 3:
+    while count < 1:
         model_inputs = []
         new_id_list = []
         for i, output in zip(id_list, outputs):
@@ -307,11 +310,12 @@ You should either return "None" or a numeric value without any additional words.
         if len(model_inputs) == 0:
             break
         else:
-            outputs = asyncio.run(generate_from_openai_chat_completion( 
+            outputs = asyncio.run(generate_from_openai_chat_completion(
+                                                    client = client,
                                                     messages = model_inputs,
-                                                    engine_name = "gpt-3.5-turbo-1106", 
+                                                    engine_name = "gpt-4o-mini", 
                                                     max_tokens = 8,
-                                                    requests_per_minute = 200,))
+                                                    requests_per_minute = 300,))
             id_list = new_id_list
             
         count += 1
@@ -325,7 +329,7 @@ You should either return "None" or a numeric value without any additional words.
 # helper function for evaluating PoT predictions
 def process_single_pot_output(output):
     # this heuristic is not perfect, if you have a better heuristic, please submit a PR, thanks!
-    if 'argparse' in output:
+    if not output or 'argparse' in output:
         return ''
     tmp = re.findall(r"```python(.*?)```", output, re.DOTALL)
     if len(tmp) > 0:
@@ -348,4 +352,6 @@ def process_single_pot_output(output):
                     processed_output = "def solution():\n    " + output
                 else:
                     processed_output = output.strip()
+    processed_output = processed_output.strip("```")
+    processed_output = processed_output.strip()
     return processed_output

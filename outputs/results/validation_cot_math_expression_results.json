@@ -1,0 +1,262 @@
+[
+    {
+        "model_name": "Codestral-22B-v0_1",
+        "accuracy": 11.5,
+        "math_expression_acc": 19.5
+    },
+    {
+        "model_name": "DeepSeek-Coder-V2-Lite-Instruct",
+        "accuracy": 27.5,
+        "math_expression_acc": 33.0
+    },
+    {
+        "model_name": "DeepSeek-V2-Lite-Chat",
+        "accuracy": 8.5,
+        "math_expression_acc": 13.0
+    },
+    {
+        "model_name": "Llama-2-70b-chat-hf",
+        "accuracy": 7.0,
+        "math_expression_acc": 14.0
+    },
+    {
+        "model_name": "Llama-2-7b-chat-hf",
+        "accuracy": 3.0,
+        "math_expression_acc": 8.5
+    },
+    {
+        "model_name": "Meta-Llama-3-70B-Instruct",
+        "accuracy": 31.5,
+        "math_expression_acc": 40.5
+    },
+    {
+        "model_name": "Meta-Llama-3-8B-Instruct",
+        "accuracy": 9.5,
+        "math_expression_acc": 16.5
+    },
+    {
+        "model_name": "Meta-Llama-3_1-405B-Instruct-Turbo",
+        "accuracy": 41.5,
+        "math_expression_acc": 55.0
+    },
+    {
+        "model_name": "Meta-Llama-3_1-70B-Instruct",
+        "accuracy": 35.0,
+        "math_expression_acc": 46.5
+    },
+    {
+        "model_name": "Meta-Llama-3_1-8B-Instruct",
+        "accuracy": 16.0,
+        "math_expression_acc": 26.0
+    },
+    {
+        "model_name": "Mistral-7B-Instruct-v0_3",
+        "accuracy": 6.5,
+        "math_expression_acc": 12.0
+    },
+    {
+        "model_name": "Mistral-Large-Instruct-2407",
+        "accuracy": 36.0,
+        "math_expression_acc": 49.5
+    },
+    {
+        "model_name": "Mistral-Nemo-Instruct-2407",
+        "accuracy": 15.5,
+        "math_expression_acc": 23.5
+    },
+    {
+        "model_name": "Mixtral-8x22B-Instruct-v0_1-AWQ",
+        "accuracy": 26.5,
+        "math_expression_acc": 35.5
+    },
+    {
+        "model_name": "Mixtral-8x7B-Instruct-v0_1",
+        "accuracy": 11.5,
+        "math_expression_acc": 22.0
+    },
+    {
+        "model_name": "Phi-3-medium-4k-instruct",
+        "accuracy": 31.0,
+        "math_expression_acc": 38.5
+    },
+    {
+        "model_name": "Phi-3-mini-4k-instruct",
+        "accuracy": 16.5,
+        "math_expression_acc": 29.0
+    },
+    {
+        "model_name": "Qwen2-72B-Instruct-AWQ",
+        "accuracy": 33.0,
+        "math_expression_acc": 42.5
+    },
+    {
+        "model_name": "Qwen2-7B-Instruct",
+        "accuracy": 16.0,
+        "math_expression_acc": 24.0
+    },
+    {
+        "model_name": "WizardCoder-33B-V1_1",
+        "accuracy": 4.5,
+        "math_expression_acc": 15.0
+    },
+    {
+        "model_name": "WizardLM-2-8x22B-AWQ",
+        "accuracy": 20.0,
+        "math_expression_acc": 33.5
+    },
+    {
+        "model_name": "WizardMath-7B-V1_1",
+        "accuracy": 9.5,
+        "math_expression_acc": 15.0
+    },
+    {
+        "model_name": "Yi-1_5-34B-Chat",
+        "accuracy": 20.5,
+        "math_expression_acc": 33.0
+    },
+    {
+        "model_name": "Yi-1_5-9B-Chat",
+        "accuracy": 23.5,
+        "math_expression_acc": 30.5
+    },
+    {
+        "model_name": "aya-23-35B",
+        "accuracy": 7.0,
+        "math_expression_acc": 15.0
+    },
+    {
+        "model_name": "aya-23-8B",
+        "accuracy": 4.5,
+        "math_expression_acc": 7.5
+    },
+    {
+        "model_name": "c4ai-command-r-plus-GPTQ",
+        "accuracy": 12.5,
+        "math_expression_acc": 24.0
+    },
+    {
+        "model_name": "claude-3-5-sonnet-20240620",
+        "accuracy": 54.5,
+        "math_expression_acc": 57.5
+    },
+    {
+        "model_name": "claude-3-haiku-20240307",
+        "accuracy": 28.0,
+        "math_expression_acc": 41.0
+    },
+    {
+        "model_name": "claude-3-opus-20240229",
+        "accuracy": 48.0,
+        "math_expression_acc": 51.5
+    },
+    {
+        "model_name": "claude-3-sonnet-20240229",
+        "accuracy": 34.5,
+        "math_expression_acc": 40.5
+    },
+    {
+        "model_name": "dbrx-instruct",
+        "accuracy": 18.5,
+        "math_expression_acc": 28.0
+    },
+    {
+        "model_name": "deepseek-chat",
+        "accuracy": 50.0,
+        "math_expression_acc": 57.5
+    },
+    {
+        "model_name": "deepseek-coder-33b-instruct",
+        "accuracy": 5.0,
+        "math_expression_acc": 12.0
+    },
+    {
+        "model_name": "deepseek-coder",
+        "accuracy": 51.0,
+        "math_expression_acc": 54.5
+    },
+    {
+        "model_name": "deepseek-math-7b-instruct",
+        "accuracy": 16.5,
+        "math_expression_acc": 28.0
+    },
+    {
+        "model_name": "finma-8B-v0_4",
+        "accuracy": 0.5,
+        "math_expression_acc": 6.5
+    },
+    {
+        "model_name": "gemini-1_5-flash",
+        "accuracy": 33.0,
+        "math_expression_acc": 38.5
+    },
+    {
+        "model_name": "gemini-1_5-pro",
+        "accuracy": 47.5,
+        "math_expression_acc": 50.0
+    },
+    {
+        "model_name": "gemma-2-9b-it",
+        "accuracy": 20.0,
+        "math_expression_acc": 30.0
+    },
+    {
+        "model_name": "gemma-2b-it",
+        "accuracy": 3.0,
+        "math_expression_acc": 5.0
+    },
+    {
+        "model_name": "gemma-7b-it",
+        "accuracy": 3.0,
+        "math_expression_acc": 7.5
+    },
+    {
+        "model_name": "glm-4-9b-chat",
+        "accuracy": 19.5,
+        "math_expression_acc": 26.5
+    },
+    {
+        "model_name": "gpt-3_5-turbo-0125",
+        "accuracy": 21.5,
+        "math_expression_acc": 27.5
+    },
+    {
+        "model_name": "gpt-4-turbo",
+        "accuracy": 45.5,
+        "math_expression_acc": 54.5
+    },
+    {
+        "model_name": "gpt-4o-mini",
+        "accuracy": 31.0,
+        "math_expression_acc": 41.5
+    },
+    {
+        "model_name": "gpt-4o",
+        "accuracy": 55.0,
+        "math_expression_acc": 59.5
+    },
+    {
+        "model_name": "internlm2-chat-7b",
+        "accuracy": 5.5,
+        "math_expression_acc": 15.5
+    },
+    {
+        "model_name": "internlm2-math-plus-7b",
+        "accuracy": 9.5,
+        "math_expression_acc": 18.5
+    },
+    {
+        "model_name": "mathstral-7B-v0_1",
+        "accuracy": 16.5,
+        "math_expression_acc": 21.0
+    },
+    {
+        "model_name": "microsoft_WizardLM-2-7B",
+        "accuracy": 8.0,
+        "math_expression_acc": 13.5
+    },
+    {
+        "model_name": "starcoder2-15b-instruct-v0_1",
+        "accuracy": 6.5,
+        "math_expression_acc": 18.5
+    }
+]

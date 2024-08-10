@@ -2,65 +2,63 @@ import asyncio
 import logging
 import os
 from typing import Any
-
-import aiolimiter
-import openai
-import openai.error
 from aiohttp import ClientSession
 from tqdm.asyncio import tqdm_asyncio
 import random
 from time import sleep
-import time
+
+import aiolimiter
+
+import openai
+from openai import AsyncOpenAI, OpenAIError
+
 
 async def _throttled_openai_chat_completion_acreate(
+    client: AsyncOpenAI,
     model: str,
     messages,
     temperature: float,
     max_tokens: int,
     top_p: float,
     limiter: aiolimiter.AsyncLimiter,
+    json_mode: bool = False,
 ):
     async with limiter:
         for _ in range(10):
             try:
-                return await openai.ChatCompletion.acreate(
+                return await client.chat.completions.create(
                     model=model,
                     messages=messages,
                     temperature=temperature,
                     max_tokens=max_tokens,
                     top_p=top_p,
+                    response_format=None if not json_mode else { "type": "json_object" },
                 )
-            except openai.error.RateLimitError:
-                logging.warning(
-                    "OpenAI API rate limit exceeded. Sleeping for 20 seconds."
-                )
-                await asyncio.sleep(10)
-            except asyncio.exceptions.TimeoutError or openai.error.Timeout or asyncio.TimeoutError:
-                logging.warning("OpenAI API timeout. Sleeping for 10 seconds.")
-                await asyncio.sleep(10)
-            except openai.error.APIError as e:
-                logging.warning(f"OpenAI API error: {e}")
-                await asyncio.sleep(10)
-            except Exception as e:
-                logging.warning(e)
-                await asyncio.sleep(10)
-        return {"choices": [{"message": {"content": ""}}]}
+
+            except openai.BadRequestError as e:
+                print(e)
+                return None
+            except OpenAIError as e:
+                print(e)
+                sleep(random.randint(5, 10))
+        return None
 
 
 async def generate_from_openai_chat_completion(
+    client,
     messages,
     engine_name: str,
     temperature: float = 1.0,
     max_tokens: int = 512,
     top_p: float = 1.0,
     requests_per_minute: int = 100,
+    json_mode: bool = False,
 ):
     """Generate from OpenAI Chat Completion API.
 
     Args:
-        full_contexts: List of full contexts to generate from.
-        prompt_template: Prompt template to use.
-        model_config: Model configuration.
+        messages: List of messages to proceed.
+        engine_name: Engine name to use, see https://platform.openai.com/docs/models
         temperature: Temperature to use.
         max_tokens: Maximum number of tokens to generate.
         top_p: Top p to use.
@@ -68,58 +66,30 @@ async def generate_from_openai_chat_completion(
 
     Returns:
         List of generated responses.
-    """
-    session = ClientSession()
-    openai.aiosession.set(session)
-    limiter = aiolimiter.AsyncLimiter(requests_per_minute)
+    """    
+    # https://chat.openai.com/share/09154613-5f66-4c74-828b-7bd9384c2168
+    delay = 60.0 / requests_per_minute
+    limiter = aiolimiter.AsyncLimiter(1, delay)
     async_responses = [
         _throttled_openai_chat_completion_acreate(
+            client,
             model=engine_name,
             messages=message,
             temperature=temperature,
             max_tokens=max_tokens,
             top_p=top_p,
             limiter=limiter,
+            json_mode=json_mode,
         )
         for message in messages
     ]
+    
     responses = await tqdm_asyncio.gather(*async_responses)
-    await session.close()
     
     outputs = []
     for response in responses:
-        outputs.append(response["choices"][0]["message"]["content"])
+        if response:
+            outputs.append(response.choices[0].message.content)
+        else:
+            outputs.append("Invalid Message")
     return outputs
-
-def generate_from_openai_chat_completion_single(
-    messages,
-    engine_name: str,
-    temperature: float = 1.0,
-    max_tokens: int = 512,
-    top_p: float = 1.0
-):
-    for _ in range(5):
-        try:
-            response = openai.ChatCompletion.create(
-                            model=engine_name,
-                            messages=messages,
-                            temperature=temperature,
-                            max_tokens=max_tokens,
-                            top_p=top_p,
-                        )
-        except openai.error.RateLimitError:
-            logging.warning(
-                "OpenAI API rate limit exceeded. Sleeping for 20 seconds."
-            )
-            time.sleep(10)
-        except asyncio.exceptions.TimeoutError or openai.error.Timeout or asyncio.TimeoutError:
-            logging.warning("OpenAI API timeout. Sleeping for 10 seconds.")
-            time.sleep(10)
-        except openai.error.APIError as e:
-            logging.warning(f"OpenAI API error: {e[:20]}")
-            time.sleep(10)
-        except Exception as e:
-            logging.warning(e[:20])
-            time.sleep(10)
-
-    return response["choices"][0]["message"]["content"]

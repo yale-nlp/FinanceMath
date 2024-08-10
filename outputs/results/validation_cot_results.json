@@ -1,0 +1,1198 @@
+[
+    {
+        "model_name": "gpt-4o",
+        "accuracy": 55.0,
+        "execution_rate": 100.0,
+        "topic_accuracy": {
+            "Accounting": 61.54,
+            "Market Analysis & Economics": 62.5,
+            "Asset Classes & Derivatives": 50.79,
+            "Quantitative Analysis & Valuation": 58.33,
+            "Risk Management": 44.44,
+            "Portfolio Management & Strategy": 42.11,
+            "Corporate & Securities Issuance": 60.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 100.0,
+            "Asset Classes & Derivatives": 100.0,
+            "Quantitative Analysis & Valuation": 100.0,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "claude-3-5-sonnet-20240620",
+        "accuracy": 54.5,
+        "execution_rate": 99.0,
+        "topic_accuracy": {
+            "Accounting": 58.97,
+            "Market Analysis & Economics": 66.67,
+            "Asset Classes & Derivatives": 46.03,
+            "Quantitative Analysis & Valuation": 55.56,
+            "Risk Management": 66.67,
+            "Portfolio Management & Strategy": 47.37,
+            "Corporate & Securities Issuance": 60.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 97.44,
+            "Market Analysis & Economics": 100.0,
+            "Asset Classes & Derivatives": 98.41,
+            "Quantitative Analysis & Valuation": 100.0,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "deepseek-coder",
+        "accuracy": 51.0,
+        "execution_rate": 98.5,
+        "topic_accuracy": {
+            "Accounting": 41.03,
+            "Market Analysis & Economics": 66.67,
+            "Asset Classes & Derivatives": 46.03,
+            "Quantitative Analysis & Valuation": 61.11,
+            "Risk Management": 44.44,
+            "Portfolio Management & Strategy": 52.63,
+            "Corporate & Securities Issuance": 50.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 100.0,
+            "Asset Classes & Derivatives": 98.41,
+            "Quantitative Analysis & Valuation": 97.22,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "deepseek-chat",
+        "accuracy": 50.0,
+        "execution_rate": 98.5,
+        "topic_accuracy": {
+            "Accounting": 46.15,
+            "Market Analysis & Economics": 79.17,
+            "Asset Classes & Derivatives": 44.44,
+            "Quantitative Analysis & Valuation": 52.78,
+            "Risk Management": 33.33,
+            "Portfolio Management & Strategy": 47.37,
+            "Corporate & Securities Issuance": 40.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 100.0,
+            "Asset Classes & Derivatives": 95.24,
+            "Quantitative Analysis & Valuation": 100.0,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "claude-3-opus-20240229",
+        "accuracy": 48.0,
+        "execution_rate": 99.0,
+        "topic_accuracy": {
+            "Accounting": 53.85,
+            "Market Analysis & Economics": 54.17,
+            "Asset Classes & Derivatives": 33.33,
+            "Quantitative Analysis & Valuation": 63.89,
+            "Risk Management": 33.33,
+            "Portfolio Management & Strategy": 52.63,
+            "Corporate & Securities Issuance": 50.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 98.41,
+            "Quantitative Analysis & Valuation": 100.0,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "gemini-1_5-pro",
+        "accuracy": 47.5,
+        "execution_rate": 98.0,
+        "topic_accuracy": {
+            "Accounting": 58.97,
+            "Market Analysis & Economics": 62.5,
+            "Asset Classes & Derivatives": 25.4,
+            "Quantitative Analysis & Valuation": 55.56,
+            "Risk Management": 44.44,
+            "Portfolio Management & Strategy": 52.63,
+            "Corporate & Securities Issuance": 70.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 97.44,
+            "Market Analysis & Economics": 100.0,
+            "Asset Classes & Derivatives": 96.83,
+            "Quantitative Analysis & Valuation": 100.0,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "gpt-4-turbo",
+        "accuracy": 45.5,
+        "execution_rate": 95.5,
+        "topic_accuracy": {
+            "Accounting": 58.97,
+            "Market Analysis & Economics": 62.5,
+            "Asset Classes & Derivatives": 33.33,
+            "Quantitative Analysis & Valuation": 50.0,
+            "Risk Management": 33.33,
+            "Portfolio Management & Strategy": 47.37,
+            "Corporate & Securities Issuance": 20.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 100.0,
+            "Asset Classes & Derivatives": 90.48,
+            "Quantitative Analysis & Valuation": 97.22,
+            "Risk Management": 88.89,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "Meta-Llama-3_1-405B-Instruct-Turbo",
+        "accuracy": 41.5,
+        "execution_rate": 78.0,
+        "topic_accuracy": {
+            "Accounting": 51.28,
+            "Market Analysis & Economics": 54.17,
+            "Asset Classes & Derivatives": 33.33,
+            "Quantitative Analysis & Valuation": 47.22,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 31.58,
+            "Corporate & Securities Issuance": 50.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 84.62,
+            "Market Analysis & Economics": 87.5,
+            "Asset Classes & Derivatives": 69.84,
+            "Quantitative Analysis & Valuation": 75.0,
+            "Risk Management": 77.78,
+            "Portfolio Management & Strategy": 84.21,
+            "Corporate & Securities Issuance": 80.0
+        }
+    },
+    {
+        "model_name": "Mistral-Large-Instruct-2407",
+        "accuracy": 36.0,
+        "execution_rate": 63.5,
+        "topic_accuracy": {
+            "Accounting": 51.28,
+            "Market Analysis & Economics": 45.83,
+            "Asset Classes & Derivatives": 30.16,
+            "Quantitative Analysis & Valuation": 36.11,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 31.58,
+            "Corporate & Securities Issuance": 10.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 76.92,
+            "Market Analysis & Economics": 83.33,
+            "Asset Classes & Derivatives": 57.14,
+            "Quantitative Analysis & Valuation": 58.33,
+            "Risk Management": 55.56,
+            "Portfolio Management & Strategy": 63.16,
+            "Corporate & Securities Issuance": 30.0
+        }
+    },
+    {
+        "model_name": "Meta-Llama-3_1-70B-Instruct",
+        "accuracy": 35.0,
+        "execution_rate": 73.0,
+        "topic_accuracy": {
+            "Accounting": 38.46,
+            "Market Analysis & Economics": 50.0,
+            "Asset Classes & Derivatives": 19.05,
+            "Quantitative Analysis & Valuation": 47.22,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 47.37,
+            "Corporate & Securities Issuance": 30.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 74.36,
+            "Market Analysis & Economics": 83.33,
+            "Asset Classes & Derivatives": 66.67,
+            "Quantitative Analysis & Valuation": 75.0,
+            "Risk Management": 55.56,
+            "Portfolio Management & Strategy": 89.47,
+            "Corporate & Securities Issuance": 60.0
+        }
+    },
+    {
+        "model_name": "claude-3-sonnet-20240229",
+        "accuracy": 34.5,
+        "execution_rate": 98.0,
+        "topic_accuracy": {
+            "Accounting": 35.9,
+            "Market Analysis & Economics": 58.33,
+            "Asset Classes & Derivatives": 19.05,
+            "Quantitative Analysis & Valuation": 41.67,
+            "Risk Management": 44.44,
+            "Portfolio Management & Strategy": 36.84,
+            "Corporate & Securities Issuance": 30.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 100.0,
+            "Asset Classes & Derivatives": 96.83,
+            "Quantitative Analysis & Valuation": 97.22,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "Qwen2-72B-Instruct-AWQ",
+        "accuracy": 33.0,
+        "execution_rate": 92.5,
+        "topic_accuracy": {
+            "Accounting": 33.33,
+            "Market Analysis & Economics": 45.83,
+            "Asset Classes & Derivatives": 22.22,
+            "Quantitative Analysis & Valuation": 47.22,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 31.58,
+            "Corporate & Securities Issuance": 30.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 89.74,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 92.06,
+            "Quantitative Analysis & Valuation": 100.0,
+            "Risk Management": 66.67,
+            "Portfolio Management & Strategy": 94.74,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "gemini-1_5-flash",
+        "accuracy": 33.0,
+        "execution_rate": 94.5,
+        "topic_accuracy": {
+            "Accounting": 38.46,
+            "Market Analysis & Economics": 45.83,
+            "Asset Classes & Derivatives": 17.46,
+            "Quantitative Analysis & Valuation": 38.89,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 52.63,
+            "Corporate & Securities Issuance": 30.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 94.87,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 90.48,
+            "Quantitative Analysis & Valuation": 100.0,
+            "Risk Management": 88.89,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "Meta-Llama-3-70B-Instruct",
+        "accuracy": 31.5,
+        "execution_rate": 96.5,
+        "topic_accuracy": {
+            "Accounting": 38.46,
+            "Market Analysis & Economics": 45.83,
+            "Asset Classes & Derivatives": 22.22,
+            "Quantitative Analysis & Valuation": 33.33,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 31.58,
+            "Corporate & Securities Issuance": 30.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 100.0,
+            "Asset Classes & Derivatives": 92.06,
+            "Quantitative Analysis & Valuation": 97.22,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "Phi-3-medium-4k-instruct",
+        "accuracy": 31.0,
+        "execution_rate": 91.5,
+        "topic_accuracy": {
+            "Accounting": 28.21,
+            "Market Analysis & Economics": 50.0,
+            "Asset Classes & Derivatives": 19.05,
+            "Quantitative Analysis & Valuation": 41.67,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 42.11,
+            "Corporate & Securities Issuance": 20.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 87.3,
+            "Quantitative Analysis & Valuation": 91.67,
+            "Risk Management": 88.89,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "gpt-4o-mini",
+        "accuracy": 31.0,
+        "execution_rate": 72.5,
+        "topic_accuracy": {
+            "Accounting": 48.72,
+            "Market Analysis & Economics": 45.83,
+            "Asset Classes & Derivatives": 20.63,
+            "Quantitative Analysis & Valuation": 27.78,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 21.05,
+            "Corporate & Securities Issuance": 30.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 84.62,
+            "Market Analysis & Economics": 91.67,
+            "Asset Classes & Derivatives": 55.56,
+            "Quantitative Analysis & Valuation": 72.22,
+            "Risk Management": 66.67,
+            "Portfolio Management & Strategy": 78.95,
+            "Corporate & Securities Issuance": 80.0
+        }
+    },
+    {
+        "model_name": "claude-3-haiku-20240307",
+        "accuracy": 28.0,
+        "execution_rate": 96.0,
+        "topic_accuracy": {
+            "Accounting": 28.21,
+            "Market Analysis & Economics": 41.67,
+            "Asset Classes & Derivatives": 15.87,
+            "Quantitative Analysis & Valuation": 25.0,
+            "Risk Management": 44.44,
+            "Portfolio Management & Strategy": 47.37,
+            "Corporate & Securities Issuance": 30.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 92.06,
+            "Quantitative Analysis & Valuation": 94.44,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "DeepSeek-Coder-V2-Lite-Instruct",
+        "accuracy": 27.5,
+        "execution_rate": 99.0,
+        "topic_accuracy": {
+            "Accounting": 28.21,
+            "Market Analysis & Economics": 29.17,
+            "Asset Classes & Derivatives": 23.81,
+            "Quantitative Analysis & Valuation": 33.33,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 31.58,
+            "Corporate & Securities Issuance": 20.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 98.41,
+            "Quantitative Analysis & Valuation": 100.0,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "Mixtral-8x22B-Instruct-v0_1-AWQ",
+        "accuracy": 26.5,
+        "execution_rate": 90.5,
+        "topic_accuracy": {
+            "Accounting": 28.21,
+            "Market Analysis & Economics": 45.83,
+            "Asset Classes & Derivatives": 19.05,
+            "Quantitative Analysis & Valuation": 30.56,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 26.32,
+            "Corporate & Securities Issuance": 20.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 94.87,
+            "Market Analysis & Economics": 79.17,
+            "Asset Classes & Derivatives": 88.89,
+            "Quantitative Analysis & Valuation": 94.44,
+            "Risk Management": 77.78,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "Yi-1_5-9B-Chat",
+        "accuracy": 23.5,
+        "execution_rate": 90.5,
+        "topic_accuracy": {
+            "Accounting": 30.77,
+            "Market Analysis & Economics": 25.0,
+            "Asset Classes & Derivatives": 14.29,
+            "Quantitative Analysis & Valuation": 30.56,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 26.32,
+            "Corporate & Securities Issuance": 20.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 87.5,
+            "Asset Classes & Derivatives": 88.89,
+            "Quantitative Analysis & Valuation": 94.44,
+            "Risk Management": 77.78,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 80.0
+        }
+    },
+    {
+        "model_name": "gpt-3_5-turbo-0125",
+        "accuracy": 21.5,
+        "execution_rate": 91.0,
+        "topic_accuracy": {
+            "Accounting": 23.08,
+            "Market Analysis & Economics": 37.5,
+            "Asset Classes & Derivatives": 12.7,
+            "Quantitative Analysis & Valuation": 27.78,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 20.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 97.44,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 88.89,
+            "Quantitative Analysis & Valuation": 91.67,
+            "Risk Management": 88.89,
+            "Portfolio Management & Strategy": 78.95,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "Yi-1_5-34B-Chat",
+        "accuracy": 20.5,
+        "execution_rate": 85.5,
+        "topic_accuracy": {
+            "Accounting": 25.64,
+            "Market Analysis & Economics": 25.0,
+            "Asset Classes & Derivatives": 9.52,
+            "Quantitative Analysis & Valuation": 33.33,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 21.05,
+            "Corporate & Securities Issuance": 10.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 94.87,
+            "Market Analysis & Economics": 87.5,
+            "Asset Classes & Derivatives": 77.78,
+            "Quantitative Analysis & Valuation": 97.22,
+            "Risk Management": 55.56,
+            "Portfolio Management & Strategy": 89.47,
+            "Corporate & Securities Issuance": 70.0
+        }
+    },
+    {
+        "model_name": "WizardLM-2-8x22B-AWQ",
+        "accuracy": 20.0,
+        "execution_rate": 75.0,
+        "topic_accuracy": {
+            "Accounting": 28.21,
+            "Market Analysis & Economics": 29.17,
+            "Asset Classes & Derivatives": 11.11,
+            "Quantitative Analysis & Valuation": 19.44,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 40.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 94.87,
+            "Market Analysis & Economics": 83.33,
+            "Asset Classes & Derivatives": 58.73,
+            "Quantitative Analysis & Valuation": 75.0,
+            "Risk Management": 55.56,
+            "Portfolio Management & Strategy": 73.68,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "gemma-2-9b-it",
+        "accuracy": 20.0,
+        "execution_rate": 85.0,
+        "topic_accuracy": {
+            "Accounting": 20.51,
+            "Market Analysis & Economics": 29.17,
+            "Asset Classes & Derivatives": 11.11,
+            "Quantitative Analysis & Valuation": 33.33,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 26.32,
+            "Corporate & Securities Issuance": 10.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 84.62,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 76.19,
+            "Quantitative Analysis & Valuation": 91.67,
+            "Risk Management": 66.67,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 80.0
+        }
+    },
+    {
+        "model_name": "glm-4-9b-chat",
+        "accuracy": 19.5,
+        "execution_rate": 81.5,
+        "topic_accuracy": {
+            "Accounting": 17.95,
+            "Market Analysis & Economics": 37.5,
+            "Asset Classes & Derivatives": 17.46,
+            "Quantitative Analysis & Valuation": 13.89,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 21.05,
+            "Corporate & Securities Issuance": 30.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 87.5,
+            "Asset Classes & Derivatives": 74.6,
+            "Quantitative Analysis & Valuation": 83.33,
+            "Risk Management": 55.56,
+            "Portfolio Management & Strategy": 78.95,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "dbrx-instruct",
+        "accuracy": 18.5,
+        "execution_rate": 94.0,
+        "topic_accuracy": {
+            "Accounting": 28.21,
+            "Market Analysis & Economics": 20.83,
+            "Asset Classes & Derivatives": 9.52,
+            "Quantitative Analysis & Valuation": 16.67,
+            "Risk Management": 33.33,
+            "Portfolio Management & Strategy": 21.05,
+            "Corporate & Securities Issuance": 20.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 97.44,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 92.06,
+            "Quantitative Analysis & Valuation": 97.22,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 89.47,
+            "Corporate & Securities Issuance": 80.0
+        }
+    },
+    {
+        "model_name": "Phi-3-mini-4k-instruct",
+        "accuracy": 16.5,
+        "execution_rate": 82.5,
+        "topic_accuracy": {
+            "Accounting": 23.08,
+            "Market Analysis & Economics": 25.0,
+            "Asset Classes & Derivatives": 7.94,
+            "Quantitative Analysis & Valuation": 16.67,
+            "Risk Management": 22.22,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 20.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 82.05,
+            "Market Analysis & Economics": 70.83,
+            "Asset Classes & Derivatives": 77.78,
+            "Quantitative Analysis & Valuation": 91.67,
+            "Risk Management": 77.78,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 80.0
+        }
+    },
+    {
+        "model_name": "deepseek-math-7b-instruct",
+        "accuracy": 16.5,
+        "execution_rate": 93.5,
+        "topic_accuracy": {
+            "Accounting": 17.95,
+            "Market Analysis & Economics": 20.83,
+            "Asset Classes & Derivatives": 12.7,
+            "Quantitative Analysis & Valuation": 13.89,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 31.58,
+            "Corporate & Securities Issuance": 10.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 83.33,
+            "Asset Classes & Derivatives": 88.89,
+            "Quantitative Analysis & Valuation": 97.22,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 94.74,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "mathstral-7B-v0_1",
+        "accuracy": 16.5,
+        "execution_rate": 79.0,
+        "topic_accuracy": {
+            "Accounting": 23.08,
+            "Market Analysis & Economics": 25.0,
+            "Asset Classes & Derivatives": 11.11,
+            "Quantitative Analysis & Valuation": 19.44,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 89.74,
+            "Market Analysis & Economics": 91.67,
+            "Asset Classes & Derivatives": 71.43,
+            "Quantitative Analysis & Valuation": 72.22,
+            "Risk Management": 77.78,
+            "Portfolio Management & Strategy": 84.21,
+            "Corporate & Securities Issuance": 70.0
+        }
+    },
+    {
+        "model_name": "Meta-Llama-3_1-8B-Instruct",
+        "accuracy": 16.0,
+        "execution_rate": 54.0,
+        "topic_accuracy": {
+            "Accounting": 12.82,
+            "Market Analysis & Economics": 33.33,
+            "Asset Classes & Derivatives": 6.35,
+            "Quantitative Analysis & Valuation": 27.78,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 10.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 58.97,
+            "Market Analysis & Economics": 66.67,
+            "Asset Classes & Derivatives": 36.51,
+            "Quantitative Analysis & Valuation": 69.44,
+            "Risk Management": 33.33,
+            "Portfolio Management & Strategy": 73.68,
+            "Corporate & Securities Issuance": 40.0
+        }
+    },
+    {
+        "model_name": "Qwen2-7B-Instruct",
+        "accuracy": 16.0,
+        "execution_rate": 74.5,
+        "topic_accuracy": {
+            "Accounting": 28.21,
+            "Market Analysis & Economics": 12.5,
+            "Asset Classes & Derivatives": 12.7,
+            "Quantitative Analysis & Valuation": 16.67,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 87.18,
+            "Market Analysis & Economics": 62.5,
+            "Asset Classes & Derivatives": 71.43,
+            "Quantitative Analysis & Valuation": 75.0,
+            "Risk Management": 55.56,
+            "Portfolio Management & Strategy": 78.95,
+            "Corporate & Securities Issuance": 80.0
+        }
+    },
+    {
+        "model_name": "Mistral-Nemo-Instruct-2407",
+        "accuracy": 15.5,
+        "execution_rate": 89.0,
+        "topic_accuracy": {
+            "Accounting": 20.51,
+            "Market Analysis & Economics": 25.0,
+            "Asset Classes & Derivatives": 9.52,
+            "Quantitative Analysis & Valuation": 16.67,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 21.05,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 87.5,
+            "Asset Classes & Derivatives": 84.13,
+            "Quantitative Analysis & Valuation": 91.67,
+            "Risk Management": 88.89,
+            "Portfolio Management & Strategy": 94.74,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "c4ai-command-r-plus-GPTQ",
+        "accuracy": 12.5,
+        "execution_rate": 85.0,
+        "topic_accuracy": {
+            "Accounting": 17.95,
+            "Market Analysis & Economics": 25.0,
+            "Asset Classes & Derivatives": 7.94,
+            "Quantitative Analysis & Valuation": 11.11,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 84.62,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 80.95,
+            "Quantitative Analysis & Valuation": 88.89,
+            "Risk Management": 55.56,
+            "Portfolio Management & Strategy": 89.47,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "Codestral-22B-v0_1",
+        "accuracy": 11.5,
+        "execution_rate": 92.5,
+        "topic_accuracy": {
+            "Accounting": 7.69,
+            "Market Analysis & Economics": 20.83,
+            "Asset Classes & Derivatives": 9.52,
+            "Quantitative Analysis & Valuation": 16.67,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 100.0,
+            "Asset Classes & Derivatives": 92.06,
+            "Quantitative Analysis & Valuation": 91.67,
+            "Risk Management": 66.67,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "Mixtral-8x7B-Instruct-v0_1",
+        "accuracy": 11.5,
+        "execution_rate": 77.0,
+        "topic_accuracy": {
+            "Accounting": 10.26,
+            "Market Analysis & Economics": 16.67,
+            "Asset Classes & Derivatives": 6.35,
+            "Quantitative Analysis & Valuation": 22.22,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 69.23,
+            "Market Analysis & Economics": 66.67,
+            "Asset Classes & Derivatives": 84.13,
+            "Quantitative Analysis & Valuation": 91.67,
+            "Risk Management": 55.56,
+            "Portfolio Management & Strategy": 68.42,
+            "Corporate & Securities Issuance": 70.0
+        }
+    },
+    {
+        "model_name": "Meta-Llama-3-8B-Instruct",
+        "accuracy": 9.5,
+        "execution_rate": 96.5,
+        "topic_accuracy": {
+            "Accounting": 10.26,
+            "Market Analysis & Economics": 0.0,
+            "Asset Classes & Derivatives": 7.94,
+            "Quantitative Analysis & Valuation": 13.89,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 21.05,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 100.0,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 96.83,
+            "Quantitative Analysis & Valuation": 94.44,
+            "Risk Management": 88.89,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "WizardMath-7B-V1_1",
+        "accuracy": 9.5,
+        "execution_rate": 87.5,
+        "topic_accuracy": {
+            "Accounting": 10.26,
+            "Market Analysis & Economics": 16.67,
+            "Asset Classes & Derivatives": 7.94,
+            "Quantitative Analysis & Valuation": 5.56,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 10.53,
+            "Corporate & Securities Issuance": 10.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 79.37,
+            "Quantitative Analysis & Valuation": 94.44,
+            "Risk Management": 66.67,
+            "Portfolio Management & Strategy": 89.47,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "internlm2-math-plus-7b",
+        "accuracy": 9.5,
+        "execution_rate": 90.0,
+        "topic_accuracy": {
+            "Accounting": 7.69,
+            "Market Analysis & Economics": 16.67,
+            "Asset Classes & Derivatives": 7.94,
+            "Quantitative Analysis & Valuation": 8.33,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 10.53,
+            "Corporate & Securities Issuance": 20.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 87.5,
+            "Asset Classes & Derivatives": 87.3,
+            "Quantitative Analysis & Valuation": 94.44,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 94.74,
+            "Corporate & Securities Issuance": 70.0
+        }
+    },
+    {
+        "model_name": "DeepSeek-V2-Lite-Chat",
+        "accuracy": 8.5,
+        "execution_rate": 79.0,
+        "topic_accuracy": {
+            "Accounting": 10.26,
+            "Market Analysis & Economics": 8.33,
+            "Asset Classes & Derivatives": 9.52,
+            "Quantitative Analysis & Valuation": 5.56,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 10.53,
+            "Corporate & Securities Issuance": 10.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 79.49,
+            "Market Analysis & Economics": 79.17,
+            "Asset Classes & Derivatives": 85.71,
+            "Quantitative Analysis & Valuation": 75.0,
+            "Risk Management": 44.44,
+            "Portfolio Management & Strategy": 84.21,
+            "Corporate & Securities Issuance": 70.0
+        }
+    },
+    {
+        "model_name": "microsoft_WizardLM-2-7B",
+        "accuracy": 8.0,
+        "execution_rate": 74.5,
+        "topic_accuracy": {
+            "Accounting": 5.13,
+            "Market Analysis & Economics": 12.5,
+            "Asset Classes & Derivatives": 6.35,
+            "Quantitative Analysis & Valuation": 11.11,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 82.05,
+            "Market Analysis & Economics": 75.0,
+            "Asset Classes & Derivatives": 68.25,
+            "Quantitative Analysis & Valuation": 80.56,
+            "Risk Management": 66.67,
+            "Portfolio Management & Strategy": 84.21,
+            "Corporate & Securities Issuance": 50.0
+        }
+    },
+    {
+        "model_name": "Llama-2-70b-chat-hf",
+        "accuracy": 7.0,
+        "execution_rate": 86.0,
+        "topic_accuracy": {
+            "Accounting": 7.69,
+            "Market Analysis & Economics": 8.33,
+            "Asset Classes & Derivatives": 4.76,
+            "Quantitative Analysis & Valuation": 5.56,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 21.05,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 95.83,
+            "Asset Classes & Derivatives": 76.19,
+            "Quantitative Analysis & Valuation": 88.89,
+            "Risk Management": 88.89,
+            "Portfolio Management & Strategy": 94.74,
+            "Corporate & Securities Issuance": 70.0
+        }
+    },
+    {
+        "model_name": "aya-23-35B",
+        "accuracy": 7.0,
+        "execution_rate": 94.5,
+        "topic_accuracy": {
+            "Accounting": 5.13,
+            "Market Analysis & Economics": 12.5,
+            "Asset Classes & Derivatives": 6.35,
+            "Quantitative Analysis & Valuation": 5.56,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 15.79,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 94.87,
+            "Market Analysis & Economics": 91.67,
+            "Asset Classes & Derivatives": 92.06,
+            "Quantitative Analysis & Valuation": 97.22,
+            "Risk Management": 88.89,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "Mistral-7B-Instruct-v0_3",
+        "accuracy": 6.5,
+        "execution_rate": 78.5,
+        "topic_accuracy": {
+            "Accounting": 12.82,
+            "Market Analysis & Economics": 8.33,
+            "Asset Classes & Derivatives": 3.17,
+            "Quantitative Analysis & Valuation": 5.56,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 10.53,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 79.17,
+            "Asset Classes & Derivatives": 74.6,
+            "Quantitative Analysis & Valuation": 80.56,
+            "Risk Management": 55.56,
+            "Portfolio Management & Strategy": 84.21,
+            "Corporate & Securities Issuance": 50.0
+        }
+    },
+    {
+        "model_name": "starcoder2-15b-instruct-v0_1",
+        "accuracy": 6.5,
+        "execution_rate": 76.5,
+        "topic_accuracy": {
+            "Accounting": 10.26,
+            "Market Analysis & Economics": 8.33,
+            "Asset Classes & Derivatives": 7.94,
+            "Quantitative Analysis & Valuation": 2.78,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 0.0,
+            "Corporate & Securities Issuance": 10.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 82.05,
+            "Market Analysis & Economics": 79.17,
+            "Asset Classes & Derivatives": 77.78,
+            "Quantitative Analysis & Valuation": 69.44,
+            "Risk Management": 66.67,
+            "Portfolio Management & Strategy": 78.95,
+            "Corporate & Securities Issuance": 70.0
+        }
+    },
+    {
+        "model_name": "internlm2-chat-7b",
+        "accuracy": 5.5,
+        "execution_rate": 84.0,
+        "topic_accuracy": {
+            "Accounting": 7.69,
+            "Market Analysis & Economics": 4.17,
+            "Asset Classes & Derivatives": 7.94,
+            "Quantitative Analysis & Valuation": 2.78,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 5.26,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 87.5,
+            "Asset Classes & Derivatives": 76.19,
+            "Quantitative Analysis & Valuation": 91.67,
+            "Risk Management": 77.78,
+            "Portfolio Management & Strategy": 89.47,
+            "Corporate & Securities Issuance": 60.0
+        }
+    },
+    {
+        "model_name": "deepseek-coder-33b-instruct",
+        "accuracy": 5.0,
+        "execution_rate": 87.5,
+        "topic_accuracy": {
+            "Accounting": 10.26,
+            "Market Analysis & Economics": 4.17,
+            "Asset Classes & Derivatives": 3.17,
+            "Quantitative Analysis & Valuation": 8.33,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 0.0,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 82.05,
+            "Market Analysis & Economics": 91.67,
+            "Asset Classes & Derivatives": 88.89,
+            "Quantitative Analysis & Valuation": 86.11,
+            "Risk Management": 77.78,
+            "Portfolio Management & Strategy": 89.47,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "WizardCoder-33B-V1_1",
+        "accuracy": 4.5,
+        "execution_rate": 85.0,
+        "topic_accuracy": {
+            "Accounting": 2.56,
+            "Market Analysis & Economics": 8.33,
+            "Asset Classes & Derivatives": 4.76,
+            "Quantitative Analysis & Valuation": 5.56,
+            "Risk Management": 11.11,
+            "Portfolio Management & Strategy": 0.0,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 94.87,
+            "Market Analysis & Economics": 87.5,
+            "Asset Classes & Derivatives": 82.54,
+            "Quantitative Analysis & Valuation": 80.56,
+            "Risk Management": 77.78,
+            "Portfolio Management & Strategy": 84.21,
+            "Corporate & Securities Issuance": 80.0
+        }
+    },
+    {
+        "model_name": "aya-23-8B",
+        "accuracy": 4.5,
+        "execution_rate": 94.5,
+        "topic_accuracy": {
+            "Accounting": 10.26,
+            "Market Analysis & Economics": 8.33,
+            "Asset Classes & Derivatives": 3.17,
+            "Quantitative Analysis & Valuation": 0.0,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 5.26,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 97.44,
+            "Market Analysis & Economics": 83.33,
+            "Asset Classes & Derivatives": 93.65,
+            "Quantitative Analysis & Valuation": 97.22,
+            "Risk Management": 88.89,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 100.0
+        }
+    },
+    {
+        "model_name": "Llama-2-7b-chat-hf",
+        "accuracy": 3.0,
+        "execution_rate": 83.5,
+        "topic_accuracy": {
+            "Accounting": 2.56,
+            "Market Analysis & Economics": 0.0,
+            "Asset Classes & Derivatives": 6.35,
+            "Quantitative Analysis & Valuation": 0.0,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 0.0,
+            "Corporate & Securities Issuance": 10.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 87.18,
+            "Market Analysis & Economics": 75.0,
+            "Asset Classes & Derivatives": 84.13,
+            "Quantitative Analysis & Valuation": 86.11,
+            "Risk Management": 66.67,
+            "Portfolio Management & Strategy": 89.47,
+            "Corporate & Securities Issuance": 80.0
+        }
+    },
+    {
+        "model_name": "gemma-2b-it",
+        "accuracy": 3.0,
+        "execution_rate": 92.0,
+        "topic_accuracy": {
+            "Accounting": 2.56,
+            "Market Analysis & Economics": 4.17,
+            "Asset Classes & Derivatives": 6.35,
+            "Quantitative Analysis & Valuation": 0.0,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 0.0,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 94.87,
+            "Market Analysis & Economics": 87.5,
+            "Asset Classes & Derivatives": 85.71,
+            "Quantitative Analysis & Valuation": 97.22,
+            "Risk Management": 100.0,
+            "Portfolio Management & Strategy": 100.0,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "gemma-7b-it",
+        "accuracy": 3.0,
+        "execution_rate": 86.5,
+        "topic_accuracy": {
+            "Accounting": 5.13,
+            "Market Analysis & Economics": 4.17,
+            "Asset Classes & Derivatives": 4.76,
+            "Quantitative Analysis & Valuation": 0.0,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 0.0,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 92.31,
+            "Market Analysis & Economics": 91.67,
+            "Asset Classes & Derivatives": 80.95,
+            "Quantitative Analysis & Valuation": 94.44,
+            "Risk Management": 77.78,
+            "Portfolio Management & Strategy": 73.68,
+            "Corporate & Securities Issuance": 90.0
+        }
+    },
+    {
+        "model_name": "finma-8B-v0_4",
+        "accuracy": 0.5,
+        "execution_rate": 41.5,
+        "topic_accuracy": {
+            "Accounting": 0.0,
+            "Market Analysis & Economics": 0.0,
+            "Asset Classes & Derivatives": 1.59,
+            "Quantitative Analysis & Valuation": 0.0,
+            "Risk Management": 0.0,
+            "Portfolio Management & Strategy": 0.0,
+            "Corporate & Securities Issuance": 0.0
+        },
+        "topic_execution_rate": {
+            "Accounting": 43.59,
+            "Market Analysis & Economics": 45.83,
+            "Asset Classes & Derivatives": 46.03,
+            "Quantitative Analysis & Valuation": 30.56,
+            "Risk Management": 66.67,
+            "Portfolio Management & Strategy": 26.32,
+            "Corporate & Securities Issuance": 40.0
+        }
+    }
+]
