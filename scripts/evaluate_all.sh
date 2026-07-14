@@ -6,6 +6,7 @@ prompt_types=(
 )
 subsets=(
     "validation"
+    "test"
 )
 
 api_base="TODO"
@@ -31,7 +32,7 @@ for prompt_type in "${prompt_types[@]}"; do
                 --prediction_path "$raw_file" \
                 --evaluation_output_dir "$processed_dir" \
                 --prompt_type "$prompt_type" \
-                --ground_truth_file "hidden_outputs/$subset.json" \
+                --ground_truth_file "data/$subset.json" \
                 --result_file "$result_file" \
                 --api_base "$api_base" \
                 --api_key "$api_key"

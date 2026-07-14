@@ -57,7 +57,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--prediction_path", type=str, required=True)
     parser.add_argument("--evaluation_output_dir", type=str, required=True)
-    parser.add_argument("--ground_truth_file", type=str, default="data/validation.json")
+    parser.add_argument("--ground_truth_file", type=str, default=None)
     parser.add_argument("--result_file", type=str, required=True)
     parser.add_argument("--api_base", type=str, default="")
     parser.add_argument("--api_key", type=str, default="")
@@ -74,11 +74,23 @@ if __name__ == "__main__":
     file_name = os.path.basename(args.prediction_path)
     os.makedirs(args.evaluation_output_dir, exist_ok=True)
     output_path = os.path.join(args.evaluation_output_dir, file_name)
-     
+
+    prediction_data = json.load(open(args.prediction_path, "r"))
+
+    # Select the ground truth by split (inferred from the question-id prefix) unless overridden
+    if args.ground_truth_file is None:
+        split = "test" if str(prediction_data[0]["question_id"]).startswith("test") else "validation"
+        args.ground_truth_file = os.path.join("data", f"{split}.json")
+
     ground_truth_raw_data = json.load(open(args.ground_truth_file, "r"))
     ground_truth_data = {}
     for example in ground_truth_raw_data:
         ground_truth_data[example["question_id"]] = example
+
+    # Guard against a split mismatch (e.g. test predictions against the validation ground truth)
+    missing = [ex["question_id"] for ex in prediction_data if ex["question_id"] not in ground_truth_data]
+    if missing:
+        raise ValueError(f"{len(missing)} prediction ids are absent from {args.ground_truth_file} (e.g. {missing[:3]}); pass the matching --ground_truth_file.")
 
     if os.path.exists(args.result_file):
         results = json.load(open(args.result_file, "r"))
@@ -89,7 +101,6 @@ if __name__ == "__main__":
         processed_data = json.load(open(output_path, "r"))
         avg_acc, avg_math_acc = get_result(processed_data)
     else:
-        prediction_data = json.load(open(args.prediction_path, "r"))
         outputs = evaluate_file_with_calculator(prediction_data, ground_truth_data, client)
         avg_acc, avg_math_acc = get_result(outputs)
 

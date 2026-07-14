@@ -5,6 +5,7 @@ prompt_types=(
 )
 subsets=(
     "validation"
+    "test"
 )
 
 api_base="TODO"

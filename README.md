@@ -12,7 +12,7 @@ The data and code for the paper [FinanceMath: Knowledge-Intensive Math Reasoning
 All the data examples were divided into two subsets: *validation* and *test*.
 
 - **validation**: 200 examples used for model development, validation, or for those with limited computing resources.
-- **test**: 1000 examples for standard evaluation. We will not publicly release the annotated solution and answer for the test set.
+- **test**: 1000 examples for standard evaluation. **Update (July 2026):** nearly three years after the initial release, the annotated `python_solution` and `ground_truth` for the test set are now publicly released as well, so both subsets can be evaluated locally.
 
 You can download this dataset by the following command:
 
@@ -57,14 +57,11 @@ We provide inference scripts for running various LLMs on FinanceMath:
 The Chain-of-Thought (CoT) and Program-of-Thought (PoT) output from various LLMs on both the validation and test sets of **FinanceMath** can be found at the `outputs` directory.
 
 ### Automated Evaluation
-We develop a heuristic-based method to automatically evaluate the accuracy of CoT and PoT outputs of the validation set:
+We develop a heuristic-based method to automatically evaluate the accuracy of CoT and PoT outputs of both the validation and test sets:
 - `scripts/evaluate_all.sh` for evaluating CoT and PoT outputs
 - `scripts/evaluate_calculator.sh` for evaluating the CoT outputs with external calculator
 
-To get the results on the test set, please send your result json file to [this email](mailto:yilun.zhao@yale.edu) (see the leaderboard section below for more details).
-
-## FinanceMath Leaderboard
-The leaderboard is continuously being updated. To submit your results to leaderboard, please send your result json file on the test set to [this email](mailto:yilun.zhao@yale.edu). Please follow the format of the [sample submission file](https://github.com/yale-nlp/FinanceMath/outputs/test/raw_cot_outputs/gpt-4-0613.json).
+Since the test set ground truth is now released, you can evaluate on both the `validation` and `test` sets locally: the scripts above read the annotations from `data/validation.json` and `data/test.json` respectively. PoT evaluation runs fully locally, whereas CoT and calculator-based evaluation additionally require a configured OpenAI-compatible API (set `api_base`/`api_key` in the scripts) for answer extraction. Submitting results by email is no longer required.
 
 ## Contact
 For any issues or questions, kindly email us at: Yilun Zhao (yilun.zhao@yale.edu).
